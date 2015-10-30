@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  </head>
   <body>
     <div class="game-window">
       <script src="./lib/keymaster.js"></script>
@@ -8,23 +11,44 @@
       <script src="./lib/tile.js"></script>
       <script src="./lib/GameView.js"></script>
 
-      <canvas id="game-canvas", height="800", width="800"></canvas>
-      <div id="bar1">
-        hello huong
-      </div>
-      <div id="bar2">
-        hello huong
+      <div class="canvas-container">
+        <div class="header">
+          LetterFall
+        </div>
+        <canvas id="game-canvas", height="800", width="800"></canvas>
+        <div class="stats">
+          <div class="stat"id="bar1">
+            hello hello
+          </div>
+          <div class="stat" id="bar2">
+            hello hello
+          </div>
+          <div class="stat" id="bar3">
+            hello hello
+          </div>
+          <div class="stat" id="bar4">
+            hello hello
+          </div>
+        </div>
       </div>
       <script>
-        var bar1 = document.getElementById("bar1");
         var canvasEl = document.getElementById("game-canvas");
         // canvasEl.height = window.innerHeight;
         // canvasEl.width = window.innerWidth;
         var ctx = canvasEl.getContext("2d");
-        var myGame = new LetterFall.Game();
-        var myGameView = new LetterFall.GameView(myGame, ctx);
-        myGameView.start();
+        // var myGame = new LetterFall.Game();
+        var startNewGame = function() {
+          myGameView = new LetterFall.GameView(new LetterFall.Game(), ctx);
+          myGameView.start();
+        }
+        startNewGame();
+        $(".header").click(function() {
+          startNewGame();
+        });
       </script>
+      <div>
+        
+      </div>
     </div>
   </body>
 </html>
