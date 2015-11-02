@@ -1,5 +1,6 @@
 body {
   /*background-color: black;*/
+  /*transition: background 1s;*/
 }
 .game-window {
   /*background-color: white;
@@ -60,4 +61,24 @@ canvas {
 
 #bar4 {
   background-color: rgb(255, 245, 154);
+}
+
+.gameover {
+  visibility: hidden;
+  margin: auto;
+  box-shadow: 0px 0px 20px #888888;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  text-align: center;
+}
+.gameover .footer {
+  margin-top: 30px
+}
+
+.github {
+  margin-top: 5px
 }
