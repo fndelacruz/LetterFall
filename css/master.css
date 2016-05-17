@@ -1,26 +1,7 @@
 body {
   background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/bright_squares.png');
-  /*background-color: black;*/
-  /*transition: background 1s;*/
 }
 .game-window {
-  /*background-color: white;
-  width: 800px;
-  height: 800px;
-
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  border: 10px 10px 10px 10px;
-  border-style: ridge;
-  border-color: brown;
-  border-radius: 10%;
-  overflow: hidden;
-
-  margin: auto;*/
 }
 
 .header {
@@ -48,19 +29,19 @@ canvas {
   display: inline-block;
 }
 
-#bar1 {
+#time {
   background-color: rgba(75, 255, 56, 0.6);
 }
 
-#bar2 {
+#speed {
   background-color: rgb(144, 154, 237);
 }
 
-#bar3 {
+#lines {
   background-color: rgb(125,242,245);
 }
 
-#bar4 {
+#points {
   background-color: rgb(255, 245, 154);
 }
 

@@ -31,16 +31,16 @@
         </div>
         <canvas id="game-canvas", height="800", width="800"></canvas>
         <div class="stats">
-          <div class="stat" id="bar1">
+          <div class="stat" id="time">
             get pain relief
           </div>
-          <div class="stat" id="bar2">
+          <div class="stat" id="speed">
             type adjacent keys to move
           </div>
-          <div class="stat" id="bar3">
+          <div class="stat" id="lines">
 
           </div>
-          <div class="stat" id="bar4">
+          <div class="stat" id="points">
             get points
           </div>
         </div>
@@ -49,47 +49,12 @@
         var canvasEl = document.getElementById("game-canvas");
         var ctx = canvasEl.getContext("2d");
         var newGame = new LetterFall.Game();
+        newGame.bindResetHandler();
         var startNewGame = function(game) {
           var newGameView = new LetterFall.GameView(game, ctx);
           newGameView.start();
         }
         startNewGame(newGame);
-        bar3.textContent = "ex: " + newGame.printNeighbors();
-        $(document).keypress(function(e) {
-          if (e.keyCode === 32 && newGame.isGameOver) {
-            ctx.clearRect(0, 0, 800, 800)
-            bar1.textContent = "collect pain relief";
-            bar2.textContent = "type adjacent keys to move";
-            bar3.textContent = "hello hello";
-            bar4.textContent = "collect points";
-
-            $("body").css({
-              backgroundColor: "white",
-              transition: "all 1s"
-            });
-
-            $("#title").css({
-              color: "black",
-              transition: "all 2s"
-            });
-
-            $(".gameover").fadeIn().css({
-              visibility: "hidden"
-            })
-
-            setTimeout(function() {
-              $("body").css({
-                transition: "none"
-              });
-
-              $("#title").css({
-                transition: "none"
-              });
-              newGame = new LetterFall.Game();
-              startNewGame(newGame);
-            }, 1000);
-          }
-        })
       </script>
       <div>
 
