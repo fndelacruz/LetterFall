@@ -4,12 +4,15 @@
 
 ![screenshot_1]
 
+[live]: http://www.florantedelacruz.com/LetterFall
+[screenshot_1]: http://www.florantedelacruz.com/LetterFall/images/LetterFall.png
+
 ## Summary
 
 LetterFall is a fast-paced letter racing game using all A-Z keys for movement.
 The backend game logic is written in Javascript using object-oriented design and
 prototypical inheritance via a utility `#inherits` function. The frontend was
-built using CSS, JavaScript and jQuery.
+built using HTML, CSS, JavaScript and jQuery.
 
 ## How to play
 
@@ -23,8 +26,10 @@ would be either "S", "Z", "F", "N", "A", "B", "Q", or "D". Step on a yellow tile
 to increase your score. Move on to a green tile to slow down the grid speed.
 
 Here are some variants you can try out:
-* Stay alive as long as possible (try to maximize your "lines" score).
-* Hard mode: Get a high score without any green tiles.
+* Easier mode: Stay alive as long as possible (maximize your "lines" score only).
+* Hard mode: Get a high score without using any green tiles.
 
-[live]: http://www.florantedelacruz.com/LetterFall
-[screenshot_1]: http://www.florantedelacruz.com/LetterFall/images/LetterFall.png
+## Todo
+
+* Add persistent score tracking by converting to a Rails App and storing high
+scores on the database
