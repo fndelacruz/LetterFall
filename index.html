@@ -53,6 +53,7 @@
         var canvasEl = document.getElementById("game-canvas");
         var ctx = canvasEl.getContext("2d");
         var newGame = new LetterFall.Game();
+        $('#lines').html("ex: " + newGame.printNeighbors());
         newGame.bindResetHandler();
         var startNewGame = function(game) {
           var newGameView = new LetterFall.GameView(game, ctx);
